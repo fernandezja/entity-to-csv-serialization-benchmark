@@ -8,12 +8,12 @@ namespace fernandezja.EntityToCsv.Extensions
 {
     public static class StringExtensions
     {
-        // Constantes para los saltos de línea
+     
         private const string NEWLINE_WINDOWS = "\r\n";
         private const string NEWLINE_LINUX_UNIX = "\n";
 
         /// <summary>
-        /// Normalizar saltos de línea (widows/linux) en test
+        /// Normalizar saltos de línea (windows/linux) en test
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
