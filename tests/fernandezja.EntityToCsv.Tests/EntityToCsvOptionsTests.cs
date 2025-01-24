@@ -1,4 +1,5 @@
-﻿using ServiceStack.Text;
+﻿using fernandezja.EntityToCsv.Extensions;
+using ServiceStack.Text;
 using Starwars.Core.Entities;
 using System;
 using System.Collections.Generic;
@@ -26,7 +27,7 @@ namespace fernandezja.EntityToCsv.Tests
 
             var result = fernandezja.EntityToCsv.EntityToCsvOption1<Jedi>.Build(entities, properties);
 
-            Assert.Equal("1,Luke Skywalker,Blue,123.45\r\n", result);
+            Assert.Equal("1,Luke Skywalker,Blue,123.45\r\n".NormalizeNewLines(), result);
 
         }
 
@@ -48,7 +49,7 @@ namespace fernandezja.EntityToCsv.Tests
 
             var result = fernandezja.EntityToCsv.EntityToCsvOption2<Jedi>.Build(entities, properties);
 
-            Assert.Equal("1,Luke Skywalker,Blue,123.45\r\n", result);
+            Assert.Equal("1,Luke Skywalker,Blue,123.45\r\n".NormalizeNewLines(), result);
 
         }
 
@@ -68,7 +69,7 @@ namespace fernandezja.EntityToCsv.Tests
 
             var result = fernandezja.EntityToCsv.EntityToCsvOption3<Jedi>.Build(entities, properties);
 
-            Assert.Equal("1,Luke Skywalker,Blue,123.45\r\n", result);
+            Assert.Equal("1,Luke Skywalker,Blue,123.45\r\n".NormalizeNewLines(), result);
 
         }
 
@@ -89,7 +90,7 @@ namespace fernandezja.EntityToCsv.Tests
 
             var result = fernandezja.EntityToCsv.EntityToCsvOption4<Jedi>.Build(entities, properties);
 
-            Assert.Equal("1,Luke Skywalker,Blue,123.45\r\n", result);
+            Assert.Equal("1,Luke Skywalker,Blue,123.45\r\n".NormalizeNewLines(), result);
 
         }
 
@@ -111,7 +112,7 @@ namespace fernandezja.EntityToCsv.Tests
             CsvConfig<Jedi>.OmitHeaders = true;
             var result = fernandezja.EntityToCsv.EntityToCsvOption5<Jedi>.Build(entities, properties);
 
-            Assert.Equal("1,Luke Skywalker,Blue,123.45\r\n", result);
+            Assert.Equal("1,Luke Skywalker,Blue,123.45\r\n".NormalizeNewLines(), result);
 
         }
 
@@ -133,7 +134,7 @@ namespace fernandezja.EntityToCsv.Tests
 
             var result = fernandezja.EntityToCsv.EntityToCsvOption6<Jedi>.Build(entities, properties);
 
-            Assert.Equal("1,Luke Skywalker,Blue,123.45\r\n", result);
+            Assert.Equal("1,Luke Skywalker,Blue,123.45\r\n".NormalizeNewLines(), result);
 
         }
 
@@ -155,7 +156,7 @@ namespace fernandezja.EntityToCsv.Tests
 
             var result = fernandezja.EntityToCsv.EntityToCsvOption7<Jedi>.Build(entities, properties);
 
-            Assert.Equal("1,Luke Skywalker,Blue,123.45\r\n", result);
+            Assert.Equal("1,Luke Skywalker,Blue,123.45\r\n".NormalizeNewLines(), result);
 
         }
 

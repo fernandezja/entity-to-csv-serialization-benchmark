@@ -48,5 +48,6 @@ namespace fernandezja.EntityToCsv
             }
             return value;
         }
+
     }
 }
