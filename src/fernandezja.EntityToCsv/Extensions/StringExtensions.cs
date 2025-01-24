@@ -9,15 +9,14 @@ namespace fernandezja.EntityToCsv.Extensions
     public static class StringExtensions
     {
         /// <summary>
-        /// Normalizar saltos de línea
+        /// Normalizar saltos de línea (widows/linux) en test
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
         public static string NormalizeNewLines(this string value)
         {
             return value
-                .Replace("\r\n", "\n")
-                .Replace("\n", Environment.NewLine);
+                .Replace("\r\n", Environment.NewLine);
         }
     }
 }
