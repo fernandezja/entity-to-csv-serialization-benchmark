@@ -1,6 +1,7 @@
 # entity-to-csv-serialization-benchmark
 Some methods/nugets to write entities to csv (string or file)  benchmark in c#
 
+[![.NET](https://github.com/fernandezja/entity-to-csv-serialization-benchmark/actions/workflows/CI-dotnet.yml/badge.svg)](https://github.com/fernandezja/entity-to-csv-serialization-benchmark/actions/workflows/CI-dotnet.yml)
 
 ### Benchmark Results
 
