@@ -45,30 +45,33 @@ namespace ConsoleAppBenchmark
         }
 
 
-        [Benchmark(Baseline = true)]
+        [Benchmark(Baseline = true, Description = "EntityToCsvOption1")]
         public void EntityToCsvOption1()
         {
             _ = fernandezja.EntityToCsv.EntityToCsvOption1<Jedi>.Build(_jedis, _properties);
         }
 
 
-        [Benchmark]
+        [Benchmark(Description = "EntityToCsvOption2")]
         public void EntityToCsvOption2()
         {
             _ = fernandezja.EntityToCsv.EntityToCsvOption2<Jedi>.Build(_jedis, _properties);
         }
 
-        [Benchmark]
+
+        [Benchmark(Description = "EntityToCsvOption3")]
         public void EntityToCsvOption3()
         {
             _ = fernandezja.EntityToCsv.EntityToCsvOption3<Jedi>.Build(_jedis, _properties);
         }
 
-        [Benchmark]
+
+        [Benchmark(Description = "EntityToCsvOption4")]
         public void EntityToCsvOption4()
         {
             _ = fernandezja.EntityToCsv.EntityToCsvOption4<Jedi>.Build(_jedis, _properties);
         }
+
 
         [Benchmark(Description = "EntityToCsvOption5 (nuget ServiceStack.Text)")]
         public void EntityToCsvOption5()

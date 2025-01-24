@@ -47,6 +47,8 @@ namespace fernandezja.EntityToCsv
                 return string.Format("{0}", Convert.ToString(item, provider: CultureInfo.InvariantCulture));
             }
 
+            //TODO: Add more types...
+
             return string.Format("\"{0}\"", item);
         }
 
