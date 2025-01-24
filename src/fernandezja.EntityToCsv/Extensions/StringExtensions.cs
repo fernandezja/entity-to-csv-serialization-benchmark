@@ -8,6 +8,10 @@ namespace fernandezja.EntityToCsv.Extensions
 {
     public static class StringExtensions
     {
+        // Constantes para los saltos de línea
+        private const string NEWLINE_WINDOWS = "\r\n";
+        private const string NEWLINE_LINUX_UNIX = "\n";
+
         /// <summary>
         /// Normalizar saltos de línea (widows/linux) en test
         /// </summary>
@@ -16,7 +20,8 @@ namespace fernandezja.EntityToCsv.Extensions
         public static string NormalizeNewLines(this string value)
         {
             return value
-                .Replace("\r\n", Environment.NewLine);
+                     .Replace(NEWLINE_WINDOWS, NEWLINE_LINUX_UNIX)
+                     .Replace(NEWLINE_LINUX_UNIX, Environment.NewLine);
         }
     }
 }
